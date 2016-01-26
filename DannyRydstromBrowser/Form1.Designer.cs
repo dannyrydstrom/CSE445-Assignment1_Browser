@@ -204,7 +204,8 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(54, 13);
             this.label5.TabIndex = 10;
-            this.label5.Text = "Long/Lat:";
+            this.label5.Text = "Lat/Long:";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // coBox
             // 
