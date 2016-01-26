@@ -39,16 +39,20 @@
             this.decryptBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.stockBtn = new System.Windows.Forms.Button();
+            this.stockPrice = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.stockSym = new System.Windows.Forms.TextBox();
+            this.symLabel = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.symLabel = new System.Windows.Forms.Label();
-            this.stockSym = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.stockPrice = new System.Windows.Forms.Label();
-            this.stockBtn = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.zipBox = new System.Windows.Forms.TextBox();
+            this.zipBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // Browser1
@@ -161,9 +165,57 @@
             this.panel2.Size = new System.Drawing.Size(261, 108);
             this.panel2.TabIndex = 4;
             // 
+            // stockBtn
+            // 
+            this.stockBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.stockBtn.Location = new System.Drawing.Point(141, 5);
+            this.stockBtn.Name = "stockBtn";
+            this.stockBtn.Size = new System.Drawing.Size(53, 20);
+            this.stockBtn.TabIndex = 7;
+            this.stockBtn.Text = "Check";
+            this.stockBtn.UseVisualStyleBackColor = true;
+            this.stockBtn.Click += new System.EventHandler(this.stockBtn_Click);
+            // 
+            // stockPrice
+            // 
+            this.stockPrice.AutoSize = true;
+            this.stockPrice.Location = new System.Drawing.Point(47, 35);
+            this.stockPrice.Name = "stockPrice";
+            this.stockPrice.Size = new System.Drawing.Size(13, 13);
+            this.stockPrice.TabIndex = 6;
+            this.stockPrice.Text = "$";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(10, 35);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(34, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Price:";
+            // 
+            // stockSym
+            // 
+            this.stockSym.Location = new System.Drawing.Point(83, 5);
+            this.stockSym.Name = "stockSym";
+            this.stockSym.Size = new System.Drawing.Size(66, 20);
+            this.stockSym.TabIndex = 1;
+            // 
+            // symLabel
+            // 
+            this.symLabel.AutoSize = true;
+            this.symLabel.Location = new System.Drawing.Point(7, 9);
+            this.symLabel.Name = "symLabel";
+            this.symLabel.Size = new System.Drawing.Size(75, 13);
+            this.symLabel.TabIndex = 0;
+            this.symLabel.Text = "Stock Symbol:";
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panel3.Controls.Add(this.zipBtn);
+            this.panel3.Controls.Add(this.zipBox);
+            this.panel3.Controls.Add(this.label4);
             this.panel3.Location = new System.Drawing.Point(439, 301);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(261, 108);
@@ -185,50 +237,32 @@
             this.panel5.Size = new System.Drawing.Size(261, 108);
             this.panel5.TabIndex = 6;
             // 
-            // symLabel
+            // label4
             // 
-            this.symLabel.AutoSize = true;
-            this.symLabel.Location = new System.Drawing.Point(7, 9);
-            this.symLabel.Name = "symLabel";
-            this.symLabel.Size = new System.Drawing.Size(75, 13);
-            this.symLabel.TabIndex = 0;
-            this.symLabel.Text = "Stock Symbol:";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(10, 15);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(55, 13);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "ZIP Code:";
             // 
-            // stockSym
+            // zipBox
             // 
-            this.stockSym.Location = new System.Drawing.Point(83, 5);
-            this.stockSym.Name = "stockSym";
-            this.stockSym.Size = new System.Drawing.Size(66, 20);
-            this.stockSym.TabIndex = 1;
+            this.zipBox.Location = new System.Drawing.Point(71, 8);
+            this.zipBox.Name = "zipBox";
+            this.zipBox.Size = new System.Drawing.Size(100, 20);
+            this.zipBox.TabIndex = 1;
             // 
-            // label3
+            // zipBtn
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(10, 35);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(34, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Price:";
-            // 
-            // stockPrice
-            // 
-            this.stockPrice.AutoSize = true;
-            this.stockPrice.Location = new System.Drawing.Point(47, 35);
-            this.stockPrice.Name = "stockPrice";
-            this.stockPrice.Size = new System.Drawing.Size(13, 13);
-            this.stockPrice.TabIndex = 6;
-            this.stockPrice.Text = "$";
-            // 
-            // stockBtn
-            // 
-            this.stockBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.stockBtn.Location = new System.Drawing.Point(141, 5);
-            this.stockBtn.Name = "stockBtn";
-            this.stockBtn.Size = new System.Drawing.Size(53, 20);
-            this.stockBtn.TabIndex = 7;
-            this.stockBtn.Text = "Check";
-            this.stockBtn.UseVisualStyleBackColor = true;
-            this.stockBtn.Click += new System.EventHandler(this.stockBtn_Click);
+            this.zipBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.zipBtn.Location = new System.Drawing.Point(167, 8);
+            this.zipBtn.Name = "zipBtn";
+            this.zipBtn.Size = new System.Drawing.Size(53, 20);
+            this.zipBtn.TabIndex = 8;
+            this.zipBtn.Text = "Check";
+            this.zipBtn.UseVisualStyleBackColor = true;
+            this.zipBtn.Click += new System.EventHandler(this.zipBtn_Click);
             // 
             // Form1
             // 
@@ -249,6 +283,8 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -275,6 +311,9 @@
         private System.Windows.Forms.TextBox stockSym;
         private System.Windows.Forms.Label symLabel;
         private System.Windows.Forms.Button stockBtn;
+        private System.Windows.Forms.Button zipBtn;
+        private System.Windows.Forms.TextBox zipBox;
+        private System.Windows.Forms.Label label4;
     }
 }
 

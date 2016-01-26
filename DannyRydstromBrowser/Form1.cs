@@ -52,5 +52,10 @@ namespace DannyRydstromBrowser
             String symbol = stockSym.Text;
             stockPrice.Text = stocks.getStockquote(symbol);
         }
+
+        private void zipBtn_Click(object sender, EventArgs e)
+        {
+            String ZIP = zipBox.Text;
+        }
     }
 }
