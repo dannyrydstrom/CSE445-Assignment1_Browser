@@ -49,13 +49,25 @@ namespace DannyRydstromBrowser
         private void stockBtn_Click(object sender, EventArgs e)
         {
             StockQuotesServ.ServiceClient stocks = new StockQuotesServ.ServiceClient();
-            String symbol = stockSym.Text;
-            stockPrice.Text = stocks.getStockquote(symbol);
         }
 
         private void zipBtn_Click(object sender, EventArgs e)
         {
             String ZIP = zipBox.Text;
+            weather.ndfdXML weatherServ = new weather.ndfdXML();
+            String XML = weatherServ.LatLonListZipCode(ZIP);
+            XML = XML.Substring(XML.IndexOf("<latLonList>") + "<latLonList>".Length, XML.IndexOf("</latLonList>") - XML.IndexOf("<latLonList>") - "<latLonList>".Length);
+            coBox.Text = XML;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Browser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+
         }
     }
 }
